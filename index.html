@@ -111,6 +111,61 @@
       <div class="outer">
         <section id="main" class="body-wrap">
   
+    <article id="post-termux" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/18/termux/"  >termux</a>
+    </h1>
+  
+
+          
+      </header>
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <div class="article-img">
+            <a href="/2020/06/18/termux/" >
+                
+                <img src="knifefire.top/images/banner.jpg" alt="termux" title="termux">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                
+Termux菜鸟教程©knifefire著，转载请注明出处哦
+如果你没有任何命令行经验，那么请先看我！！！点此加作者QQ
+对于没有电脑，却又想成为一名天才极客的童鞋们简直就是不要太好
+我是春节才开始接触termux的，之后就一发不可收拾。
+初始化第一次启动Termux的时候需要从远程服务器加载数据，然而可能会遇到这种问题：
+Ubable to install
+Termu...
+            </p>
+        </div>
+      
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2020-06-18</li>
+            
+            
+        </ul>
+        
+            <a href="/2020/06/18/termux/#more" class="article-more-link" >more&gt;&gt;</a>
+        
+    </footer>
+  </div>
+</article>
+
+
+  
     <article id="post-linux" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -127,135 +182,21 @@
     
     <div class="article-entry " itemprop="articleBody">
       
-            
-            <h2 id="Linux入门"><a href="#Linux入门" class="headerlink" title="Linux入门"></a>Linux入门</h2><p>©knifefire著，转载请注明出处哦</p>
-<p><a href="https://qm.qq.com/cgi-bin/qm/qr?k=JfLh15cfSzG0vziJz6EdW67XrIlSMpdM&noverify=0" target="_blank" rel="noopener">点此加作者QQ</a></p>
-<p>本章入门介绍希望能帮助到各位快速了解并上手LINUX操作系统，在学习的过程希望大家不要只停留在命令的维度上（LINUX主要是在命令行窗口操作执行指令，虽然也有图形界面），而是更多的关注如何去使用LINUX系统的方法。</p>
-<h2 id="为什么选择LINUX"><a href="#为什么选择LINUX" class="headerlink" title="为什么选择LINUX"></a>为什么选择LINUX</h2><p>1.Linux使系统更简洁，可自定义化，它不像Windows一样强制捆绑任何软件占用你的内存空间。</p>
-<p>2.Linux中一切皆文件。 你将能通过各个文件充分了解你的操作系统。</p>
-<p>3.Linux属于开源软件，安全性能相对来说更高。</p>
-<p>有关选择什么样的LINUX版本问题，以后如有大家有需要会后续在单独介绍一些安装演示。（常用的LINUX有CentOS,Ubuntu,RedHat等），下面直奔主题,环境使用CentOS7.x版本。</p>
-<h3 id="LINUX一切皆文件"><a href="#LINUX一切皆文件" class="headerlink" title="LINUX一切皆文件"></a>LINUX一切皆文件</h3><p>把这点放在第一个介绍的原因是希望大家整体先了解下LINUX的目录结构，可以把它们当作Windows中的C盘,D盘，，是用来存放你们想放置的文件。LINUX有它固定的目录结构，当然你也可以自定义你个性化的目录结构。</p>
-<p>Linux文件常用目录结构（当然也可以不自定义自动生成一个目录结构</p>
-<pre><code>/ ：根目录
-/home :家目录
-/bin :存放命令文件夹
-/etc :配置文件夹
-/usr ：用户安装文件夹
-/mnt :挂载目录
-/proc ：内核文件夹
-/opt :安装包文件夹
-/lib :库文件夹
-/var :变量日记文件夹</code></pre><h2 id="初观Linux"><a href="#初观Linux" class="headerlink" title="初观Linux"></a>初观Linux</h2><h3 id="Linux运行级别概念"><a href="#Linux运行级别概念" class="headerlink" title="Linux运行级别概念"></a>Linux运行级别概念</h3><p>Linux是一个多用户模式运行系统，即图形化和非图形化</p>
-<p>便对应两种不同的运行级别。级别数总共分为6个级别，以数字来表示相对应的用户运行模式。</p>
-<pre><code>0：关机模式
-1：单用户模式（忘记密码可进入此模式下找回，不能支持远程）
-2：多用户无网络模式
-3：多用户有网络模式
-4：空
-5：图形化界面
-6：重启</code></pre><p>切换方式用命令和快捷键都可以（在terminal输入命令 init [运行级别对应的数字]）</p>
-<p> 快捷键： ctrl+alt+[F2]</p>
-<p> 注：[ ] 中括号不要输入，且init命令方式存在 缺点: 每次切换都需要重新输入密码。</p>
-<h2 id="玩转Linux入门命令篇"><a href="#玩转Linux入门命令篇" class="headerlink" title="玩转Linux入门命令篇"></a>玩转Linux入门命令篇</h2><p> 1.Linux文本编辑器</p>
-<p>类似Windows中的记事本 ，Linux也有常用的文本编辑器VI / VIM。</p>
-<p>创建及打开命令： vim [文件名] 创建一个名为jack01的文本文件，</p>
-<p>下面重点介绍我们如何对文本编辑器实现增，删，改，查，</p>
-<p>VI/VIM文本编辑器有三种状态模式：默认模式，插入模式，命令行格式，必须了解清楚这三种模式才能清楚如何在哪种模式下实现相应的功能。</p>
-<pre><code>①默认模式： 创建或打开一个文件时即处于默认模式，此模式下可以查看文件内容，但不跟更改内容。
-
-②插入模式： 进入默认模式后按下键盘上的 i（insert）即进入插入模式 按键盘上ESC键返回默认模式，此模式下可以实现文本的编辑增删改功能。
-
-③命令行模式： 默认模式下键盘上 : 进入 命令行模式，此模式下实现退出或保存文件功能。</code></pre><p>有三种命令:</p>
-<pre><code>：wq 写入退出
-: q 退出
-：q！ 强制退出</code></pre><ul>
-<li>-基础快捷键功能- -：</li>
-</ul>
-<p>处于命令行模式下</p>
-<pre><code>设置行号：[：set nu]
-取消行号：[：set nonu]
-查找文档单词：[: /查找的关键字]（继续按n 可继续查找下一个同样的关键字）</code></pre><p>  处于默认模式下</p>
-<pre><code>复制：[YY](注：快捷命令按的时候都不会显示，只有完成才看得到效果)
-粘贴：[P]
-删除：[dd]（注：复制和删除命令前可加上数字，默认操作是1行，例如3yy往下复制3行。）
-跳转光标到文档最末行：[G]
-跳转光标到文档首行：[gg]
-撤销：[u]
-显示光标至第几行：输入行号 然后按Shift+g</code></pre><h2 id="2-关机重启"><a href="#2-关机重启" class="headerlink" title="2.关机重启"></a>2.关机重启</h2><pre><code>1.shutdown [参数]
-#配合上常用参数
--h now 立即关机
--h 1 定时1分钟后关机
--r now :重启
-
-2.halt 关机
-
-3.reboot 重启
-
-4.logout 注销
-
-5.init 0 关机（注意：是数字0不是字母）</code></pre><p>   （注：关机或重启前最后执行下sync命令，相当于防文档丢失，把内存数据同步到磁盘中）</p>
-<p>3.查看文件及目录</p>
-<pre><code>1.ls [参数]
-2.cd [路径名] ：切换到指定目录（注：这里要注意相对路径和绝对路径）
-
-#常用参数:
-cd ~ ：回到根目录
-cd .. ：这是两个英文的点啊 ，为了大家能看清所以用了中文输入法就变成了句号（所有命令的输入都是以英文输入法输入）
-3.常用的还有 more [文件名] 和 less [文件名] 和 cat [文件名]， 这里就不一 一举例了，后面会更具体的教大家如何通过帮助指令查看对应命令的参数的作用</code></pre><p>4.帮助指令</p>
-<pre><code>1.man [命令 | 配置文件] ：man命令可以查到所有关于此命令或配置文件的帮助文档。
-2.help [命令] ：快速查看帮助参数指令 (有些版本不支持，可以用以下命令 info [命令])</code></pre><p>5.创建文件</p>
-<pre><code>#1创建目录：
-mkdir [创建的目录名]
-
-#2.创建文件
-vim [创建文件名]
-touch [创建文件名]</code></pre><p>6.删除文件及目录<br>    rmdir [要删除的空目录名]：注意这个命令只能删空的目录<br>    rm -rf [目录名]： rm命令配合上参数 rf暴力删除所有一切，慎用，慎用，慎用！！</p>
-<p>7.文件及目录的变更</p>
-<pre><code>#这里先普及几个符号概念后面会用到
-[|]①代表管道符,就是在键盘上的反斜杠同一个键
-②代表逻辑或（当表示②的时候命令中不用输入）
-**&gt;**重定向符（可以理解为覆盖的功能）
-**&gt;&gt;**追加（顾名思义作用就是在文本内容后面补充）
-
-1.cat [文件A] &gt; [文件B] ：把文件A的内容覆盖到B中
-2.mv [文件A] [文件B | 目录B] ： 把文件A重命名为B，若B为目录名的话则A文件移入B目录中
-3.cp [文件A] [目录B] ： 把文件A拷贝到目录B下</code></pre><p>8.搜索查找发现</p>
-<pre><code>1.which [命令名] ：which命令的作用是，在PATH变量指定的路径中，搜索某个系统命令的位置，并且返回第一个搜索结果。（当查找的是文件的时候则会出现下图的报错，所以这个命令适合查找你需要的命令是否存在）
-2.locate [文件]
-3.grep 此命令可以配合**管道符|**来使用</code></pre><h2 id="管理Linux的用户，组，其它概念"><a href="#管理Linux的用户，组，其它概念" class="headerlink" title="管理Linux的用户，组，其它概念"></a>管理Linux的用户，组，其它概念</h2><p>这节内容对于用户的管理相当重要，只有分清用户(user) 组(grounp) 其它(other) 这三者，才能对后面的文件属性权限的赋予理解清楚。<br>一. user<br>    Linux是多用户管理，所以可以创建多个用户。</p>
-<pre><code>1，useradd [用户名] 创建一个新的用户。
-2,passwd [用户名] 修改指定用户的密码。
-3，userdel [用户名] 删除用户，保留了home目录  （配合[-r]参数可把home删除）
-4，id 用户名 查询用户信息 。
-5，su [用户名] 切换用户。
-6，whoami 查看当前用户。</code></pre><p>二，group</p>
-<pre><code>1,groupadd [组名] 创建组
-2，groupdel [组名] 删除组
-3,usermod -g [组名] [用户名] 改变用户所在组
-4,chgrp [组名] [文件名] 修改文件所在组</code></pre><h3 id="文件类型管理及修改"><a href="#文件类型管理及修改" class="headerlink" title="文件类型管理及修改"></a>文件类型管理及修改</h3><ol>
-<li><p>文件类型说明(总共十个位置按索引号0-9对应说明解释。)</p>
-<p> 0：这第一个位置是表示文件类型的。如图d 代表目录，若是 - 则代表普通文件<br> 123（控制user权限）：r读权限，w写权限，x执行权限<br> 456（控制group权限）：rwx对应如上<br> 789（控制other权限）：rwx如上<br> 注： r-4,w-2,x-1可等换数值表示。</p>
-</li>
-<li><p>修改权限</p>
-<p> chmod u=rwx,g=rw,o=x [文件目录名] 赋予用户读写执行权限，组读写权限，其他执行权限<br> chmod 777 123 此处用数值代表赋予用户，组，其他 w(4)r(2)x(1)的权限，等价用字母效果</p>
-</li>
-</ol>
-<h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><p>入门基本操作先说这些吧，如果大家喜欢的话希望多多支持，创作不易，你们的支持便是我最大的动力。（如文中有错误或您觉得适合补充的地方，望大家即时联系我，欢迎大家一起交流学习。）</p>
-
-            <div class="post-copyright">
-    <div class="content">
-        <p>最后更新： 2020年06月17日 15:38</p>
-        <p>原始链接： <a class="post-url" href="/2020/06/17/linux/" title="Linux入门">knifefire.top/2020/06/17/linux/</a></p>
-        <footer>
-            <a href="knifefire.top">
-                <img src="/images/logo.png" alt="knifefire">
-                knifefire
+        <div class="article-img">
+            <a href="/2020/06/17/linux/" >
+                
+                <img src="knifefire.top/images/banner.jpg" alt="Linux入门" title="Linux入门">
+                
             </a>
-        </footer>
-    </div>
-</div>
-
+        </div>
+        <div class="article-feed">
+            <p>
+                Linux入门©knifefire著，转载请注明出处哦
+点此加作者QQ
+本章入门介绍希望能帮助到各位快速了解并上手LINUX操作系统，在学习的过程希望大家不要只停留在命令的维度上（LINUX主要是在命令行窗口操作执行指令，虽然也有图形界面），而是更多的关注如何去使用LINUX系统的方法。
+为什么选择LINUX1.Linux使系统更简洁，可自定义化，它不像Windows一样...
+            </p>
+        </div>
       
         
     </div>
