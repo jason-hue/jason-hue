@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CLI | Knifefire</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="knifefire's Blog" />
+  
+  <meta name="description" content="命令行入门©knifefire著，转载记得注明出处哦！ 注：程序员不学命令行，不如回家卖烤肠学前基础文件（夹）即目录~：用户目录 &#x2F;：Linux没有盘符的概念，&#x2F;就是硬盘 .：当前目录 ..：父级目录 $：没有实际意义，仅表示可以输入命令从背单词开始directory 目录、文件夹 file 文件 make 新建 remove 删除 move 移动 copy 复制 list 罗列 link 链接">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CLI">
+<meta property="og:url" content="knifefire.top/2020/06/19/CLI/index.html">
+<meta property="og:site_name" content="Knifefire">
+<meta property="og:description" content="命令行入门©knifefire著，转载记得注明出处哦！ 注：程序员不学命令行，不如回家卖烤肠学前基础文件（夹）即目录~：用户目录 &#x2F;：Linux没有盘符的概念，&#x2F;就是硬盘 .：当前目录 ..：父级目录 $：没有实际意义，仅表示可以输入命令从背单词开始directory 目录、文件夹 file 文件 make 新建 remove 删除 move 移动 copy 复制 list 罗列 link 链接">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-19T07:51:20.140Z">
+<meta property="article:modified_time" content="2020-06-19T07:51:20.140Z">
+<meta property="article:author" content="knifefire">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/js/pace.min.js"></script>
+
+  
+
+  
+  
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">knifefire&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        knifefire&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="MinHow" target="_blank" href="//minhow.com">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/wongminho">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/WongMinHo">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//twitter.com/huangminhow">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-CLI" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      CLI
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2020-06-19
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="命令行入门"><a href="#命令行入门" class="headerlink" title="命令行入门"></a>命令行入门</h1><p>©knifefire著，转载记得注明出处哦！</p>
+<h4 id="注：程序员不学命令行，不如回家卖烤肠"><a href="#注：程序员不学命令行，不如回家卖烤肠" class="headerlink" title="注：程序员不学命令行，不如回家卖烤肠"></a>注：程序员不学命令行，不如回家卖烤肠</h4><h2 id="学前基础"><a href="#学前基础" class="headerlink" title="学前基础"></a>学前基础</h2><h3 id="文件（夹）即目录"><a href="#文件（夹）即目录" class="headerlink" title="文件（夹）即目录"></a>文件（夹）即目录</h3><pre><code>~：用户目录
+/：Linux没有盘符的概念，/就是硬盘
+.：当前目录
+..：父级目录
+$：没有实际意义，仅表示可以输入命令</code></pre><h3 id="从背单词开始"><a href="#从背单词开始" class="headerlink" title="从背单词开始"></a>从背单词开始</h3><pre><code>directory 目录、文件夹
+file 文件
+make 新建
+remove 删除
+move 移动
+copy 复制
+list 罗列
+link 链接
+find 查找
+echo 发出回声、重复
+touch 触摸
+change 改变</code></pre><h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><pre><code>创建目录---make directory---mkdir
+删除---remove---rm
+移动/重命名---move---mv
+复制---copy---cp</code></pre><p>   罗列—list—ls<br>   改变目录—change directory—cd</p>
+<h3 id="小试牛刀"><a href="#小试牛刀" class="headerlink" title="小试牛刀"></a>小试牛刀</h3><pre><code>cd ~/Desktop 进入桌面目录
+mkdir demo 创建 demo 目录，看看桌面，闪现
+cd demo 进入 demo 目录
+touch 1.txt 创建 1.txt 文件
+mv 1.txt 2.txt 将 1.txt 重命名为 2.txt
+rm 2.txt 删除 2.txt</code></pre><h3 id="绝对路径与相对路径"><a href="#绝对路径与相对路径" class="headerlink" title="绝对路径与相对路径"></a>绝对路径与相对路径</h3><p>前者相当于上海市南京东路100号，</p>
+<p>后者相当于上海市南京东路100号的隔壁</p>
+<p>一个可以直接找到，另一个必须通过相对于它的地址才能找到</p>
+<p>一般以 / 开头的路径就是绝对路径，如 /Users/Tom、/c/Users/</p>
+<h3 id="常见的自带命令"><a href="#常见的自带命令" class="headerlink" title="常见的自带命令"></a>常见的自带命令</h3><h4 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h4><pre><code>进入目录 ----- cd</code></pre><p>小技巧：在任何目录下输入：cd回车，都可以回到 ~ 目录</p>
+<pre><code>显示当前目录（绝对地址）----- pwd
+创建目录 ----- mkdir 目录名
+创建多级目录 ----- mkdir -p &quot;父级目录/子级目录&quot;
+创建多个目录 ----- mkdir -p 目录1 目录2
+我是谁（查看系统管理员名称） ----- whoami</code></pre><h4 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h4><pre><code>查看路径（展开当前目录下的内容） ----- ls
+查看所有路径（所有内容，包括以 . 开头的隐藏内容） ----- ls -a
+查看路径信息（d:目录；-:文件；r:可读；w:可写；x:可执行）----- ls -l
+查看所有路径信息 ------ ls -al</code></pre><h4 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h4><pre><code>创建文件 ----- touch 文件名
+改变文件更新时间 ----- touch 文件名
+写入内容到文件（文件不存在那么就创建文件并写入；会覆盖）----- echo &apos;内容&apos; &gt; 文件路径
+追加文件内容 ----- echo &apos;内容&apos; &gt;&gt; 文件路径 （win 不支持）</code></pre><h4 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h4><pre><code>复制文件（内容） ----- cp 源路径 目标路径
+复制目录 ----- cp -r 源路径 目标路径</code></pre><h4 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h4><pre><code>移动/重命名文件、目录 ----- mv 源路径 目标路径</code></pre><h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><pre><code>删除文件 ----- rm 文件名
+强制删除文件（不会询问确认） ----- rm -f 文件名
+删除目录（递归删除） ----- rm -r 目录名
+强制删除目录 ----- rm -rf 目录名</code></pre><h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><pre><code>用默认编辑器打开文件 ----- open（非 win 用户）/ start（win 用户）
+查看目录结构 ----- tree （win 不支持）
+查看文件内容 ----- cat 文件名
+下载文件到本地文件 ----- curl -L https://www.baidu.com &gt; baidu.html
+拷贝网页 ----- wget -p -H -e robots=off https://www.baidu.com （win 不支持）
+磁盘占用 ----- df -kh
+当前文件大小 ----- du -sh
+各文件大小 ----- du -h
+使用 vim 打开文件 ----- vi 文件名</code></pre><h3 id="如何退出-vim"><a href="#如何退出-vim" class="headerlink" title="如何退出 vim"></a>如何退出 vim</h3><p>(不保存）强制退出：狂按 ESC ，输入:q!回车</p>
+<p>(保存）退出：狂按 ESC ，输入:wq回车</p>
+<p>q：quit；w：write；</p>
+<p>为什么要狂按：防止手欠没按上</p>
+<h4 id="怎么学习-vim"><a href="#怎么学习-vim" class="headerlink" title="怎么学习 vim"></a>怎么学习 vim</h4><p>vim 被誉为编辑器之神，不知道编辑器与 IDE 区别请自行 google</p>
+<p>如果你想要入门 vim ：</p>
+<p>在命令行输入 vimtutor，即可看完官方自带中文教程，看完它</p>
+<p>简明 vim 练级教程</p>
+<p>一个 vim 游戏</p>
+<h4 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h4><pre><code>方向键上/下 ----- 上一条命令/下一条命令
+Tab ----- 自动补全路径
+&apos;&gt;&apos; ----- 重定向
+&amp;&amp; ----- 前面命令执行成功了，后面命令才执行
+|| ----- 前面命令执行失败了，后面命令就执行
+; ----- 前面命令不管执行是否成功，只要执行完了就执行后面命令</code></pre><h3 id="关于-bashrc-文件的奇淫技巧"><a href="#关于-bashrc-文件的奇淫技巧" class="headerlink" title="关于 ~/.bashrc 文件的奇淫技巧"></a>关于 ~/.bashrc 文件的奇淫技巧</h3><p>~/.bashrc 文件功能异常强大，谁用谁知道</p>
+<h4 id="自动运行"><a href="#自动运行" class="headerlink" title="自动运行"></a>自动运行</h4><p>命令行输入 start ~/.bashrc，编辑这个文件，内容为 echo ‘Hi’</p>
+<p>当然，你也可以直接命令行 echo “echo ‘Hi’” &gt;&gt; ~/.bashrc</p>
+<p>保存、关闭 git bash，重新打开 git bash，是不是看见了Hi</p>
+<p>这说明每次进入 git bash，都会优先执行 ~/.bashrc 里面的命令</p>
+<p>那么能利用这个做什么呢？重新编辑 ~/.bashrc ，将刚才编辑的命令改为 cd ~/Desktop，重启 git bash，有没有发现默认进入桌面目录？</p>
+<p>你可以利用 ~/.bashrc 文件在进入 git bash 前执行任何命令，是不是很方便？<br>alias</p>
+<p>在 ~/.bashrc 里新增一行 alias hw=”echo ‘Hello World!’”，不要自己在等号两边加空格，保存退出</p>
+<p>命令行输入 source ~/.bash_profile ，作用是执行 ~/.bashrc 而不需要重启 git bash</p>
+<p>命令行输入 hw，就会看到 Hello World!</p>
+<p>这说明 hw 被设置成了 Hello World! 的缩写</p>
+<p>利用这个我们可以将很多命令进行缩写设置，比如</p>
+<pre><code>alias ll=&quot;ls -l&quot;
+alias la=&quot;ls -a&quot;
+alias rr=&quot;rm -rf&quot;
+alias cdd=&quot;cd ~/Desktop&quot;
+alias gst=&quot;git status -sb&quot;
+alias ga=&quot;git add&quot;
+alias ga.=&quot;git add .&quot;
+alias gc=&quot;git commit&quot;
+alias gc.=&quot;git commit .&quot;</code></pre><p>保存退出，命令行输入 source ~/.bash_profile</p>
+<p>这样你的日常和Git操作就会简单很多</p>
+<pre><code>ga 1.txt
+ga .
+gc 1.txt
+gc .
+gst</code></pre><h3 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h3><p>你还可以在 ~/.bashrc 里面设置一些环境变量，比如加一行</p>
+<p>export SASS_BINARY_SITE=”<a href="http://npm.taobao.org/mirrors/node-sass&quot;" target="_blank" rel="noopener">http://npm.taobao.org/mirrors/node-sass&quot;</a></p>
+<p>那么你安装 node-sass 的时候就不会因为被墙而报错</p>
+<h3 id="设置PATH"><a href="#设置PATH" class="headerlink" title="设置PATH"></a>设置PATH</h3><p>~/.bashrc 文件加一条 export PATH=”目录的绝对路径:$PATH”</p>
+<p>具体会有什么效果可以看脚本，里面有解释</p>
+<p>好啦，当你大致地过了一遍上面的知识，你就可以愉快地开始你的命令行之旅了，祝你旅途愉快!!!</p>
+<p>©knifefire &amp; ZH</p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2020年06月19日 15:51</p>
+        <p>原始链接： <a class="post-url" href="/2020/06/19/CLI/" title="CLI">knifefire.top/2020/06/19/CLI/</a></p>
+        <footer>
+            <a href="knifefire.top">
+                <img src="/images/logo.png" alt="knifefire">
+                knifefire
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=knifefire.top/2020/06/19/CLI/&title=《CLI》 — Knifefire&pic=knifefire.topimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=knifefire.top/2020/06/19/CLI/&title=《CLI》 — Knifefire&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=knifefire.top/2020/06/19/CLI/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《CLI》 — Knifefire&url=knifefire.top/2020/06/19/CLI/&via=knifefire.top" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=knifefire.top/2020/06/19/CLI/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=knifefire.top/2020/06/19/CLI/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#命令行入门"><span class="post-toc-text">命令行入门</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#注：程序员不学命令行，不如回家卖烤肠"><span class="post-toc-text">注：程序员不学命令行，不如回家卖烤肠</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#学前基础"><span class="post-toc-text">学前基础</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件（夹）即目录"><span class="post-toc-text">文件（夹）即目录</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#从背单词开始"><span class="post-toc-text">从背单词开始</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#缩写"><span class="post-toc-text">缩写</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#小试牛刀"><span class="post-toc-text">小试牛刀</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#绝对路径与相对路径"><span class="post-toc-text">绝对路径与相对路径</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常见的自带命令"><span class="post-toc-text">常见的自带命令</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#目录"><span class="post-toc-text">目录</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#路径"><span class="post-toc-text">路径</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#文件"><span class="post-toc-text">文件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#复制"><span class="post-toc-text">复制</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#移动"><span class="post-toc-text">移动</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#删除"><span class="post-toc-text">删除</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#其他"><span class="post-toc-text">其他</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何退出-vim"><span class="post-toc-text">如何退出 vim</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#怎么学习-vim"><span class="post-toc-text">怎么学习 vim</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#快捷键"><span class="post-toc-text">快捷键</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于-bashrc-文件的奇淫技巧"><span class="post-toc-text">关于 ~&#x2F;.bashrc 文件的奇淫技巧</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#自动运行"><span class="post-toc-text">自动运行</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#环境变量"><span class="post-toc-text">环境变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#设置PATH"><span class="post-toc-text">设置PATH</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2020/06/19/termux/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          termux
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2020/06/17/linux/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Linux入门</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2020 knifefire<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "knifefire.top",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 0
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            
+        </div>
+        <div id="sidebar-menu-box-tags">
+            
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+
+<script src="/js/search.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  
+<script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+
+  
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  
+<script src="/js/animate.js"></script>
+
+
+
+  
+<script src="/js/pop-img.js"></script>
+
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
