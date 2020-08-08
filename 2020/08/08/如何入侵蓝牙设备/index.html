@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>如何入侵蓝牙设备 | Knifefire</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="knifefire's Blog" />
+  
+  <meta name="description" content="首先，我们来看看今天的主角——一个非常有用的攻击媒介（蓝牙）蓝牙设备的出现让我们的生活更加便利！在2020年，你可以在任何一个人家中发现蓝牙设备，廉价的基础蓝牙设备几乎人人都有、人人都用，新的蓝牙设备也在不断被推上市场。总体来说，有谁会不喜欢快捷便利的蓝牙设备呢？Who doesn’t？但是，如果有一个使用蓝牙音箱外放的讨厌邻居或表面风平浪静、尽职尽责，实际上却偷偷使用蓝牙耳机听音乐的下属简直太糟">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何入侵蓝牙设备">
+<meta property="og:url" content="knifefire.top/2020/08/08/%E5%A6%82%E4%BD%95%E5%85%A5%E4%BE%B5%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87/index.html">
+<meta property="og:site_name" content="Knifefire">
+<meta property="og:description" content="首先，我们来看看今天的主角——一个非常有用的攻击媒介（蓝牙）蓝牙设备的出现让我们的生活更加便利！在2020年，你可以在任何一个人家中发现蓝牙设备，廉价的基础蓝牙设备几乎人人都有、人人都用，新的蓝牙设备也在不断被推上市场。总体来说，有谁会不喜欢快捷便利的蓝牙设备呢？Who doesn’t？但是，如果有一个使用蓝牙音箱外放的讨厌邻居或表面风平浪静、尽职尽责，实际上却偷偷使用蓝牙耳机听音乐的下属简直太糟">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-08-08T13:24:17.670Z">
+<meta property="article:modified_time" content="2020-08-08T13:12:30.540Z">
+<meta property="article:author" content="knifefire">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/js/pace.min.js"></script>
+
+  
+
+  
+  
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">knifefire&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        knifefire&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Knifefire" target="_blank" href="//knifefire.top">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-如何入侵蓝牙设备" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      如何入侵蓝牙设备
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2020-08-08
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h2 id="首先，我们来看看今天的主角——一个非常有用的攻击媒介（蓝牙）"><a href="#首先，我们来看看今天的主角——一个非常有用的攻击媒介（蓝牙）" class="headerlink" title="首先，我们来看看今天的主角——一个非常有用的攻击媒介（蓝牙）"></a>首先，我们来看看今天的主角——一个非常有用的攻击媒介（蓝牙）</h2><h3 id="蓝牙设备的出现让我们的生活更加便利！在2020年，你可以在任何一个人家中发现蓝牙设备，廉价的基础蓝牙设备几乎人人都有、人人都用，新的蓝牙设备也在不断被推上市场。总体来说，有谁会不喜欢快捷便利的蓝牙设备呢？Who-doesn’t？但是，如果有一个使用蓝牙音箱外放的讨厌邻居或表面风平浪静、尽职尽责，实际上却偷偷使用蓝牙耳机听音乐的下属简直太糟糕可怕了！今天，让ThousandShadow带你对蓝牙设备进行DDoS攻击，解决这些令人心烦的问题吧。"><a href="#蓝牙设备的出现让我们的生活更加便利！在2020年，你可以在任何一个人家中发现蓝牙设备，廉价的基础蓝牙设备几乎人人都有、人人都用，新的蓝牙设备也在不断被推上市场。总体来说，有谁会不喜欢快捷便利的蓝牙设备呢？Who-doesn’t？但是，如果有一个使用蓝牙音箱外放的讨厌邻居或表面风平浪静、尽职尽责，实际上却偷偷使用蓝牙耳机听音乐的下属简直太糟糕可怕了！今天，让ThousandShadow带你对蓝牙设备进行DDoS攻击，解决这些令人心烦的问题吧。" class="headerlink" title="蓝牙设备的出现让我们的生活更加便利！在2020年，你可以在任何一个人家中发现蓝牙设备，廉价的基础蓝牙设备几乎人人都有、人人都用，新的蓝牙设备也在不断被推上市场。总体来说，有谁会不喜欢快捷便利的蓝牙设备呢？Who doesn’t？但是，如果有一个使用蓝牙音箱外放的讨厌邻居或表面风平浪静、尽职尽责，实际上却偷偷使用蓝牙耳机听音乐的下属简直太糟糕可怕了！今天，让ThousandShadow带你对蓝牙设备进行DDoS攻击，解决这些令人心烦的问题吧。"></a>蓝牙设备的出现让我们的生活更加便利！在2020年，你可以在任何一个人家中发现蓝牙设备，廉价的基础蓝牙设备几乎人人都有、人人都用，新的蓝牙设备也在不断被推上市场。总体来说，有谁会不喜欢快捷便利的蓝牙设备呢？Who doesn’t？但是，如果有一个使用蓝牙音箱外放的讨厌邻居或表面风平浪静、尽职尽责，实际上却偷偷使用蓝牙耳机听音乐的下属简直太糟糕可怕了！今天，让ThousandShadow带你对蓝牙设备进行DDoS攻击，解决这些令人心烦的问题吧。</h3><h3 id="尽管现代的Wi-Fi路由器能够过滤不需要的数据包，但大多数蓝牙适配器还是比较笨拙的。总的来说，他们并不关心您发送的是什么包，多少包。因此，对于我们来说，将Linux中ping数据包的信息量增加到一个巨大的值，然后将这些数据包发送到具有蓝牙功能的设备（例如588）绝对不困难。"><a href="#尽管现代的Wi-Fi路由器能够过滤不需要的数据包，但大多数蓝牙适配器还是比较笨拙的。总的来说，他们并不关心您发送的是什么包，多少包。因此，对于我们来说，将Linux中ping数据包的信息量增加到一个巨大的值，然后将这些数据包发送到具有蓝牙功能的设备（例如588）绝对不困难。" class="headerlink" title="尽管现代的Wi-Fi路由器能够过滤不需要的数据包，但大多数蓝牙适配器还是比较笨拙的。总的来说，他们并不关心您发送的是什么包，多少包。因此，对于我们来说，将Linux中ping数据包的信息量增加到一个巨大的值，然后将这些数据包发送到具有蓝牙功能的设备（例如588）绝对不困难。"></a>尽管现代的Wi-Fi路由器能够过滤不需要的数据包，但大多数蓝牙适配器还是比较笨拙的。总的来说，他们并不关心您发送的是什么包，多少包。因此，对于我们来说，将Linux中ping数据包的信息量增加到一个巨大的值，然后将这些数据包发送到具有蓝牙功能的设备（例如588）绝对不困难。</h3><p>现在按顺序来。首先，我们先看看自身的蓝牙设备信息。为此，请使用命令：<a href="/1.jpg"></a></p>
+<p>看到我们的蓝牙设备已开启后，我们就可以开始对附近的蓝牙设备进行扫描探测了，请使用命令：<a href="/2.jpg"></a></p>
+<p>通过这种简单的操作，你将获得可攻击的蓝牙设备的名称和MAC地址。</p>
+<p>如果你的系统看不到蓝牙适配器，那么我建议安装用于Linux的蓝牙管理器。</p>
+<p>在Kali中，可以使用以下命令安装：<br><a href="/3.jpg"></a></p>
+<p><a href="/4.jpg"></a><br><a href="/5.jpg"></a></p>
+<p>收到潜在受害者的清单后，你可以通过l2ping安排DDoS攻击</p>
+<p>让我们使用以下命令：<br><a href="/6.jpg"></a></p>
+<p>它将生成您在参数中指定的大小的数据包，并将这些数据包发送到作为参数记录的MAC地址。最后，您将看到在终端中，响应时间将逐渐增加，并且在被攻击的设备上，蓝牙设备会很嘈杂，很可能会关闭。片刻之后，它仍然会打开，但是音乐会被打断，然后你就会会获得一定的满足感。当被攻击的设备（例如电话）通过蓝牙连接到耳机或扬声器时，这种方法效果很好。攻击后，这两个设备将无法相互连接。</p>
+<pre><code>这种方法几乎适用于任何蓝牙扬声器，耳机和其他类似设备。仅仅是因为制造商没有为他们发布可以过滤传入数据包的新固件。因此，如果您有一台搭载Linux的笔记本电脑，则绝对可以称自己为便携式扬声器的强大代表。</code></pre><h3 id="关于现成的干扰机"><a href="#关于现成的干扰机" class="headerlink" title="关于现成的干扰机"></a>关于现成的干扰机</h3><pre><code>好奇的商品在互联网上出售，您可以在其中找到频率干扰器。他们通常花费不菲的钱，并提供不同的选择。有些可以立即关闭移动网络，Wi-Fi和蓝牙的几乎所有信号，而另一些则无法应对H +。
+
+如果您认为确实需要类似的产品，那么强烈建议您在购买之前熟悉当前的法规。在中国，除有特殊涉密任务单位之外的单位和个人，不得使用无线电干扰设备。凡符合使用无线电干扰设备要求条件的涉密单位，需购置、设置和使用干扰设备的，需持所在市（地）级以上保密部门或中央和国家机关保密工作机构审核批准的《保密会议移动通信干扰器购置审核备案表》，按批准的设备型号和数量向国家保密局授权的企业购买，接受无线电管理部门的指导、监督和检查，并在使用前必须到无线电管理部门备案后方可使用。</code></pre><h3 id="我们连接到其他人的设备"><a href="#我们连接到其他人的设备" class="headerlink" title="我们连接到其他人的设备"></a>我们连接到其他人的设备</h3><pre><code>众所周知，原始扬声器和头戴式耳机几乎从不过滤发送给他们的数据包。但是，如果您不仅向此类设备发送带有ping数据的数据包，而且向其发送请求连接到该设备的数据包，该怎么办？并不困难。
+
+并非所有耳机制造商都已注意缓冲区溢出保护。如果所有程序包都已排队，那么无处存储请求时会发生什么？该列将尝试执行命令并刷新缓冲区。
+
+因此，我们使用标准的蓝牙通信协议-rfcomm。但是由于控制协议本身的实用程序不允许我们发送上千个这样的请求，因此我们将编写一个小的Python脚本来自动执行该过程。
+
+#!/usr/bin/env python
+import subprocess
+cmd=[&apos;rfcomm&apos;, &apos;connect&apos;, &apos;&lt;MAC_address&gt;&apos;, &apos;1&apos;]
+for i in range(0, 1001):
+subprocess.call(cmd)
+print(&apos;Connecting...&apos;)
+
+在运行脚本之前，我们需要找出设备的MAC地址。为此，我们使用已经熟悉的命令hcitool scan，然后将接收到的地址插入到脚本中&lt;MAC_address&gt;。现在，我们保存脚本并运行它：
+
+$ python &lt;FileName&gt;
+
+该脚本是否有效取决于被攻击设备的型号，或者取决于填充缓冲区的速度。如果缓冲区在清除之前有时间填满，则将执行该命令，然后我们将与主用户同时连接到该列。如果缓冲区被清除，则将无法执行任何操作，您将不得不重新启动脚本。</code></pre><p> 如果我们的脚本成功运行，我们便可以拥有自己的迪斯科舞厅或关闭他人的蓝牙设备。</p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2020年08月08日 21:12</p>
+        <p>原始链接： <a class="post-url" href="/2020/08/08/%E5%A6%82%E4%BD%95%E5%85%A5%E4%BE%B5%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87/" title="如何入侵蓝牙设备">knifefire.top/2020/08/08/%E5%A6%82%E4%BD%95%E5%85%A5%E4%BE%B5%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87/</a></p>
+        <footer>
+            <a href="knifefire.top">
+                <img src="/images/logo.png" alt="knifefire">
+                knifefire
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=knifefire.top/2020/08/08/%E5%A6%82%E4%BD%95%E5%85%A5%E4%BE%B5%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87/&title=《如何入侵蓝牙设备》 — Knifefire&pic=knifefire.topimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=knifefire.top/2020/08/08/%E5%A6%82%E4%BD%95%E5%85%A5%E4%BE%B5%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87/&title=《如何入侵蓝牙设备》 — Knifefire&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=knifefire.top/2020/08/08/%E5%A6%82%E4%BD%95%E5%85%A5%E4%BE%B5%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《如何入侵蓝牙设备》 — Knifefire&url=knifefire.top/2020/08/08/%E5%A6%82%E4%BD%95%E5%85%A5%E4%BE%B5%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87/&via=knifefire.top" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=knifefire.top/2020/08/08/%E5%A6%82%E4%BD%95%E5%85%A5%E4%BE%B5%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=knifefire.top/2020/08/08/%E5%A6%82%E4%BD%95%E5%85%A5%E4%BE%B5%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#首先，我们来看看今天的主角——一个非常有用的攻击媒介（蓝牙）"><span class="post-toc-text">首先，我们来看看今天的主角——一个非常有用的攻击媒介（蓝牙）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#蓝牙设备的出现让我们的生活更加便利！在2020年，你可以在任何一个人家中发现蓝牙设备，廉价的基础蓝牙设备几乎人人都有、人人都用，新的蓝牙设备也在不断被推上市场。总体来说，有谁会不喜欢快捷便利的蓝牙设备呢？Who-doesn’t？但是，如果有一个使用蓝牙音箱外放的讨厌邻居或表面风平浪静、尽职尽责，实际上却偷偷使用蓝牙耳机听音乐的下属简直太糟糕可怕了！今天，让ThousandShadow带你对蓝牙设备进行DDoS攻击，解决这些令人心烦的问题吧。"><span class="post-toc-text">蓝牙设备的出现让我们的生活更加便利！在2020年，你可以在任何一个人家中发现蓝牙设备，廉价的基础蓝牙设备几乎人人都有、人人都用，新的蓝牙设备也在不断被推上市场。总体来说，有谁会不喜欢快捷便利的蓝牙设备呢？Who doesn’t？但是，如果有一个使用蓝牙音箱外放的讨厌邻居或表面风平浪静、尽职尽责，实际上却偷偷使用蓝牙耳机听音乐的下属简直太糟糕可怕了！今天，让ThousandShadow带你对蓝牙设备进行DDoS攻击，解决这些令人心烦的问题吧。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#尽管现代的Wi-Fi路由器能够过滤不需要的数据包，但大多数蓝牙适配器还是比较笨拙的。总的来说，他们并不关心您发送的是什么包，多少包。因此，对于我们来说，将Linux中ping数据包的信息量增加到一个巨大的值，然后将这些数据包发送到具有蓝牙功能的设备（例如588）绝对不困难。"><span class="post-toc-text">尽管现代的Wi-Fi路由器能够过滤不需要的数据包，但大多数蓝牙适配器还是比较笨拙的。总的来说，他们并不关心您发送的是什么包，多少包。因此，对于我们来说，将Linux中ping数据包的信息量增加到一个巨大的值，然后将这些数据包发送到具有蓝牙功能的设备（例如588）绝对不困难。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于现成的干扰机"><span class="post-toc-text">关于现成的干扰机</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#我们连接到其他人的设备"><span class="post-toc-text">我们连接到其他人的设备</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/06/20/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%A5%E9%97%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">命令行入门</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+        <div id="SOHUCS" sid="如何入侵蓝牙设备" ></div>
+<script type="text/javascript">
+    (function(){
+        var appid = 'true';
+        var conf = 'true';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2020 knifefire<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "knifefire.top",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 0
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            
+        </div>
+        <div id="sidebar-menu-box-tags">
+            
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+
+<script src="/js/search.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  
+<script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+
+  
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  
+<script src="/js/animate.js"></script>
+
+
+
+  
+<script src="/js/pop-img.js"></script>
+
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
