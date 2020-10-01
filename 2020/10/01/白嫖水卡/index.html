@@ -5,12 +5,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Archive: 2020</title>
+    <title>白嫖水卡 - Knifefire</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    
+    <meta name="description" content="需要工具:手机(需支持nfc)x1
+要破解的水卡x1
+MIFARE读写工具x1
+此教程只适用扇区密码已知的卡
+不知道密码的卡我会发别的教程的
+按位取反就是说将十六进制转成二进制
+1换成0，0换成1再,"> 
     <meta name="author" content="knifefire"> 
     <link rel="alternative" href="atom.xm" title="Knifefire" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -44,51 +50,94 @@
 <body class="loading">
     <span id="config-title" style="display:none">Knifefire</span>
     <div id="loader"></div>
-    <div id="single" class="page">
-    <div id="top">
-        <a class="iconfont icon-left image-icon" href="javascript:history.back()"></a>
-    </div>
-    <div class="section">
-        <div class="article">
-            <div class="main">
-                <div class="content">
-                    <div class="timeline">
-                      <h2 class="timeline-title">归档: 4篇</h2><hr>
-                      
-                      
-                        
-                          <h3 class="timeline-subtitle">2020</h3>
-                        
-                        <div class="timeline-item">
-                          <time>2020-10-01</time>
-                          <a target="_self" href="/2020/10/01/%E7%99%BD%E5%AB%96%E6%B0%B4%E5%8D%A1/">白嫖水卡</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2020-06-20</time>
-                          <a target="_self" href="/2020/06/20/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%A5%E9%97%A8/">命令行入门</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2020-06-20</time>
-                          <a target="_self" href="/2020/06/20/termux%E5%85%A5%E9%97%A8/">termux入门</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2020-06-20</time>
-                          <a target="_self" href="/2020/06/20/Linux%E5%85%A5%E9%97%A8/">Linux入门</a>
-                        </div>
-                      
-                    </div>
-                </div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="knifefire.top"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">白嫖水卡</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
             </div>
+            <div id="qr"></div>
         </div>
     </div>
+    <div class="scrollbar"></div>
 </div>
 
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">白嫖水卡</h1>
+        <div class="stuff">
+            <span>十月 01, 2020</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h2 id="需要工具"><a href="#需要工具" class="headerlink" title="需要工具:"></a>需要工具:</h2><p>手机(需支持nfc)x1</p>
+<p>要破解的水卡x1</p>
+<p>MIFARE读写工具x1</p>
+<h3 id="此教程只适用扇区密码已知的卡"><a href="#此教程只适用扇区密码已知的卡" class="headerlink" title="此教程只适用扇区密码已知的卡"></a>此教程只适用扇区密码已知的卡</h3><p><img src="/a.jpg" alt=""></p>
+<p>不知道密码的卡我会发别的教程的</p>
+<p>按位取反就是说将十六进制转成二进制</p>
+<p>1换成0，0换成1再转成16进制就可以了</p>
+<p>我们学校水卡的算法是将金额转成十六进制然后倒过来，248.20=60F4<br>倒过来就是F460</p>
+<p>校验位是F460的按位取反<br>得0B9F</p>
+<p>修改数据</p>
+<p>（每个学校水卡算法不同，此算法不一定适用你的水卡）</p>
+<p>现在将金额改成333块钱</p>
+<p>保留两位小数就是333.00</p>
+<p>去掉点33300转十六进制</p>
+<p>得8214，然后倒过来得1482</p>
+<p>然后搞定校验位</p>
+<p>1482按位取反得0B7D</p>
+<p>然后替换</p>
+<p>原金额F460替换成1482</p>
+<p>原校验位0B9F替换成0B7D</p>
+<p><img src="/b.jpg" alt=""></p>
+<p>不会的随时问哦[哈哈][哈哈]</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://ws.stream.qqmusic.qq.com/C4000001anWl3Funek.m4a?guid=291917159&vkey=FAB5B065115C974B2771DC0C532D6426DDC4F03B53F14E58BF23B703F829E8FABD0219DEDFD1A90B0CBCA6E03A772309EADD47AB92879E6A&uin=0&fromtag=66'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://music.163.com/song/media/outer/url?id=1402868799.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 
