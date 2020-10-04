@@ -1,148 +1,183 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<!-- Head tag -->
 <head>
-  <meta charset="utf-8">
-  
-  <title>命令行入门 | Knifefire</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-    <meta name="keywords" content="knifefire's Blog" />
-  
-  <meta name="description" content="命令行入门©knifefire著，转载记得注明出处哦！ 注：程序员不学命令行，不如回家卖烤肠学前基础文件（夹）即目录~：用户目录 &#x2F;：Linux没有盘符的概念，&#x2F;就是硬盘 .：当前目录 ..：父级目录 $：没有实际意义，仅表示可以输入命令从背单词开始directory 目录、文件夹 file 文件 make 新建 remove 删除 move 移动 copy 复制 list 罗列 link 链接">
-<meta property="og:type" content="article">
-<meta property="og:title" content="命令行入门">
-<meta property="og:url" content="knifefire.top/2020/06/20/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%A5%E9%97%A8/index.html">
-<meta property="og:site_name" content="Knifefire">
-<meta property="og:description" content="命令行入门©knifefire著，转载记得注明出处哦！ 注：程序员不学命令行，不如回家卖烤肠学前基础文件（夹）即目录~：用户目录 &#x2F;：Linux没有盘符的概念，&#x2F;就是硬盘 .：当前目录 ..：父级目录 $：没有实际意义，仅表示可以输入命令从背单词开始directory 目录、文件夹 file 文件 make 新建 remove 删除 move 移动 copy 复制 list 罗列 link 链接">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-20T00:09:11.350Z">
-<meta property="article:modified_time" content="2020-06-19T07:51:20.140Z">
-<meta property="article:author" content="knifefire">
-<meta name="twitter:card" content="summary">
-  
-  
-    <link rel="icon" href="/favicon.ico">
-  
-  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="命令行入门©knifefire著，转载记得注明出处哦！
+注：程序员不学命令行，不如回家卖烤肠学前基础文件（夹）即目录~：用户目录
+/：Linux没有盘符的概念，/就是硬盘
+.：当前目录
+..：父级目录
+$：没有实际意义，仅表示可以输入命令从背单词开始directory 目录、文件夹
+file 文件
+">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="knifefire">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="命令行入门"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Knifefire"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    
+        <meta name="twitter:card" content="summary" />
+    
+    
+    
+
+    <!-- Title -->
+    
+    <title>命令行入门 - Knifefire</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    
 <link rel="stylesheet" href="/css/style.css">
 
-  
-<script src="/js/pace.min.js"></script>
 
-  
+    <!-- Google Analytics -->
+    
 
-  
-  
 
 <meta name="generator" content="Hexo 4.2.1"></head>
 
+
 <body>
-  <div id="container">
-      <header id="header">
-    <div id="banner"></div>
-    <div id="header-outer">
-        <div id="header-menu" class="header-menu-pos animated">
-            <div class="header-menu-container">
-                <a href="/" class="left">
-                    <span class="site-title">knifefire&#39;s Blog</span>
-                </a>
-                <nav id="header-menu-nav" class="right">
-                    
-                    <a  href="/">
-                        <i class="fa fa-home"></i>
-                        <span>Home</span>
-                    </a>
-                    
-                    <a  href="/archives">
-                        <i class="fa fa-archive"></i>
-                        <span>Archives</span>
-                    </a>
-                    
-                    <a  href="/about">
-                        <i class="fa fa-user"></i>
-                        <span>About</span>
-                    </a>
-                    
-                </nav>
-                <a class="mobile-header-menu-button">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-        </div>
-        <div id="header-row">
-            <div id="logo">
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
                 <a href="/">
-                    <img src="/images/logo.png" alt="logo">
+                    Home
                 </a>
-            </div>
-            <div class="header-info">
-                <div id="header-title">
-                    
-                    <h2>
-                        knifefire&#39;s Blog
-                    </h2>
-                    
-                </div>
-                <div id="header-description">
-                    
-                    <h3>
-                        一个专注开发的技术博客
-                    </h3>
-                    
-                </div>
-            </div>
-            <nav class="header-nav">
-                <div class="social">
-                    
-                        <a title="Knifefire" target="_blank" href="//knifefire.top">
-                            <i class="fa fa-home fa-2x"></i></a>
-                    
-                        <a title="Github" target="_blank" href="//">
-                            <i class="fa fa-github fa-2x"></i></a>
-                    
-                        <a title="Weibo" target="_blank" href="//">
-                            <i class="fa fa-weibo fa-2x"></i></a>
-                    
-                        <a title="Twitter" target="_blank" href="//">
-                            <i class="fa fa-twitter fa-2x"></i></a>
-                    
-                </div>
-            </nav>
-        </div>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
     </div>
 </header>
-      <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-命令行入门" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="post-title" itemprop="name">
-      命令行入门
-    </h1>
-    <div class="post-title-bar">
-      <ul>
-          
-        <li>
-          <i class="fa fa-calendar"></i>  2020-06-20
-        </li>
-        <li>
-          <i class="fa fa-eye"></i>
-          <span id="busuanzi_value_page_pv"></span>
-        </li>
-      </ul>
-    </div>
-  
 
-          
-      </header>
-    
-    <div class="article-entry post-content" itemprop="articleBody">
-      
+        <section class="main">
             
-            <h1 id="命令行入门"><a href="#命令行入门" class="headerlink" title="命令行入门"></a>命令行入门</h1><p>©knifefire著，转载记得注明出处哦！</p>
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2020/06/20/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%A5%E9%97%A8/">
+                命令行入门
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2020-06-20</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="命令行入门"><a href="#命令行入门" class="headerlink" title="命令行入门"></a>命令行入门</h1><p>©knifefire著，转载记得注明出处哦！</p>
 <h4 id="注：程序员不学命令行，不如回家卖烤肠"><a href="#注：程序员不学命令行，不如回家卖烤肠" class="headerlink" title="注：程序员不学命令行，不如回家卖烤肠"></a>注：程序员不学命令行，不如回家卖烤肠</h4><h2 id="学前基础"><a href="#学前基础" class="headerlink" title="学前基础"></a>学前基础</h2><h3 id="文件（夹）即目录"><a href="#文件（夹）即目录" class="headerlink" title="文件（夹）即目录"></a>文件（夹）即目录</h3><pre><code>~：用户目录
 /：Linux没有盘符的概念，/就是硬盘
 .：当前目录
@@ -242,276 +277,190 @@ gst</code></pre><h3 id="环境变量"><a href="#环境变量" class="headerlink"
 <p>好啦，当你大致地过了一遍上面的知识，你就可以愉快地开始你的命令行之旅了，祝你旅途愉快!!!</p>
 <p>©knifefire &amp; ZH</p>
 
-            <div class="post-copyright">
-    <div class="content">
-        <p>最后更新： 2020年06月19日 15:51</p>
-        <p>原始链接： <a class="post-url" href="/2020/06/20/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%A5%E9%97%A8/" title="命令行入门">knifefire.top/2020/06/20/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%A5%E9%97%A8/</a></p>
-        <footer>
-            <a href="knifefire.top">
-                <img src="/images/logo.png" alt="knifefire">
-                knifefire
-            </a>
-        </footer>
+    </div>
+
+    
+
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
     </div>
 </div>
 
-      
-        
-            
 
-        
-    </div>
-    <footer class="article-footer">
-        
-        
-<div class="post-share">
-    <a href="javascript:;" id="share-sub" class="post-share-fab">
-        <i class="fa fa-share-alt"></i>
-    </a>
-    <div class="post-share-list" id="share-list">
-        <ul class="share-icons">
-          <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=knifefire.top/2020/06/20/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%A5%E9%97%A8/&title=《命令行入门》 — Knifefire&pic=knifefire.topimages/logo.png" data-title="微博">
-              <i class="fa fa-weibo"></i>
-            </a>
-          </li>
-          <li>
-            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
-              <i class="fa fa-weixin"></i>
-            </a>
-          </li>
-          <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=knifefire.top/2020/06/20/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%A5%E9%97%A8/&title=《命令行入门》 — Knifefire&source=" data-title="QQ">
-              <i class="fa fa-qq"></i>
-            </a>
-          </li>
-          <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=knifefire.top/2020/06/20/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%A5%E9%97%A8/" data-title="Facebook">
-              <i class="fa fa-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《命令行入门》 — Knifefire&url=knifefire.top/2020/06/20/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%A5%E9%97%A8/&via=knifefire.top" data-title="Twitter">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=knifefire.top/2020/06/20/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%A5%E9%97%A8/" data-title="Google+">
-              <i class="fa fa-google-plus"></i>
-            </a>
-          </li>
-        </ul>
-     </div>
-</div>
-<div class="post-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;" id="wxShare-close">×</a>
-    <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=knifefire.top/2020/06/20/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%A5%E9%97%A8/" alt="微信分享二维码">
 </div>
 
-<div class="mask"></div>
+<!-- Footer -->
+<div class="push"></div>
 
-        
-        <ul class="article-footer-menu">
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    This theme was developed by <a href="https://github.com/klugjo" target="_blank" rel="noopener">Jonathan Klughertz</a>. The source code is available on Github. Create Websites. Make Magic.
+                </p>
+            </div>
             
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2020/10/01/%E7%99%BD%E5%AB%96%E6%B0%B4%E5%8D%A1/">白嫖水卡</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2020/06/20/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%A5%E9%97%A8/">命令行入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2020/06/20/termux%E5%85%A5%E9%97%A8/">termux入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2020/06/20/Linux%E5%85%A5%E9%97%A8/">Linux入门</a>
+            </li>
             
         </ul>
-        
-    </footer>
-  </div>
-</article>
-
-
-    <aside class="post-toc-pos post-toc-top" id="post-toc">
-        <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#命令行入门"><span class="post-toc-text">命令行入门</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#注：程序员不学命令行，不如回家卖烤肠"><span class="post-toc-text">注：程序员不学命令行，不如回家卖烤肠</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#学前基础"><span class="post-toc-text">学前基础</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件（夹）即目录"><span class="post-toc-text">文件（夹）即目录</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#从背单词开始"><span class="post-toc-text">从背单词开始</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#缩写"><span class="post-toc-text">缩写</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#小试牛刀"><span class="post-toc-text">小试牛刀</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#绝对路径与相对路径"><span class="post-toc-text">绝对路径与相对路径</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常见的自带命令"><span class="post-toc-text">常见的自带命令</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#目录"><span class="post-toc-text">目录</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#路径"><span class="post-toc-text">路径</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#文件"><span class="post-toc-text">文件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#复制"><span class="post-toc-text">复制</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#移动"><span class="post-toc-text">移动</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#删除"><span class="post-toc-text">删除</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#其他"><span class="post-toc-text">其他</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何退出-vim"><span class="post-toc-text">如何退出 vim</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#怎么学习-vim"><span class="post-toc-text">怎么学习 vim</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#快捷键"><span class="post-toc-text">快捷键</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于-bashrc-文件的奇淫技巧"><span class="post-toc-text">关于 ~&#x2F;.bashrc 文件的奇淫技巧</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#自动运行"><span class="post-toc-text">自动运行</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#环境变量"><span class="post-toc-text">环境变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#设置PATH"><span class="post-toc-text">设置PATH</span></a></li></ol></li></ol></li></ol>
-        </nav>
-    </aside>
-    
-
-<nav id="article-nav">
-  
-    <a href="/2020/10/01/%E7%99%BD%E5%AB%96%E6%B0%B4%E5%8D%A1/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          白嫖水卡
-        
-      </span>
-    </a>
-  
-  
-    <a href="/2020/06/20/termux%E5%85%A5%E9%97%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">termux入门</span>
-      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
-    </a>
-  
-</nav>
-
-
-
-    
-        <div id="SOHUCS" sid="命令行入门" ></div>
-<script type="text/javascript">
-    (function(){
-        var appid = 'true';
-        var conf = 'true';
-        var width = window.innerWidth || document.documentElement.clientWidth;
-        if (width < 960) {
-            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
-    
-</section>
-        
-      </div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-<p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
-        总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
-
-
-      <p>
-        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
-        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
-      &copy; 2020 knifefire<br>
-      </p>
     </div>
-  </div>
+
+
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/klugjo/hexo-theme-alpha-dust" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/?lang=en" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://dribbble.com/" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://telegram.org/" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-telegram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.behance.net/" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://500px.com/" target="_blank" rel="noopener">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:test@example.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @Untitled. All right reserved | Design & Hexo <a href="http://www.codeblocq.com/" target="_blank" rel="noopener">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script>
-  var mihoConfig = {
-      root: "knifefire.top",
-      animate: true,
-      isHome: false,
-      share: true,
-      reward: 0
-  }
-</script>
-<div class="sidebar">
-    <div id="sidebar-search" title="Search">
-        <i class="fa fa-search"></i>
-    </div>
-    <div id="sidebar-category" title="Categories">
-        <i class="fa fa-book"></i>
-    </div>
-    <div id="sidebar-tag" title="Tags">
-        <i class="fa fa-tags"></i>
-    </div>
-    <div id="sidebar-top">
-        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
-    </div>
-</div>
-<div class="sidebar-menu-box" id="sidebar-menu-box">
-    <div class="sidebar-menu-box-container">
-        <div id="sidebar-menu-box-categories">
-            
-        </div>
-        <div id="sidebar-menu-box-tags">
-            
-        </div>
-    </div>
-    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
-</div>
-<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
-    <div class="mobile-header-menu-container">
-        <span class="title">Menus</span>
-        <ul class="mobile-header-menu-navbar">
-            
-            <li>
-                <a  href="/">
-                    <i class="fa fa-home"></i><span>Home</span>
-                </a>
-            </li>
-            
-            <li>
-                <a  href="/archives">
-                    <i class="fa fa-archive"></i><span>Archives</span>
-                </a>
-            </li>
-            
-            <li>
-                <a  href="/about">
-                    <i class="fa fa-user"></i><span>About</span>
-                </a>
-            </li>
-            
-        </ul>
-    </div>
-    <div class="mobile-header-tag-container">
-        <span class="title">Tags</span>
-        <div id="mobile-header-container-tags">
-            
-        </div>
-    </div>
-</div>
-<div class="search-wrap">
-    <span class="search-close">&times;</span>
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-            <i class="icon icon-lg icon-chevron-left"></i>
-        </a>
-        <input class="search-field" placeholder="Search..." id="keywords">
-        <a id="search-submit" href="javascript:;">
-            <i class="fa fa-search"></i>
-        </a>
-    <div class="search-container" id="search-container">
-        <ul class="search-result" id="search-result">
-        </ul>
-    </div>
-</div>
 
-<div id="search-tpl">
-    <li class="search-result-item">
-        <a href="{url}" class="search-item-li">
-            <span class="search-item-li-title" title="{title}">{title}</span>
-        </a>
-    </li>
-</div>
+<!-- After footer scripts -->
 
-<script src="/js/search.js"></script>
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
 
 <script src="/js/main.js"></script>
 
 
-
-  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
-  <div id="particles"></div>
-  
-<script src="/js/particles.js"></script>
+<!-- Disqus Comments -->
 
 
 
-
-
-
-
-
-  
-<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
-
-  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
-  
-<script src="/js/animate.js"></script>
-
-
-
-  
-<script src="/js/pop-img.js"></script>
-
-  <script>
-     $(".article-entry p img").popImg();
-  </script>
-
-  </div>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
 </html>
