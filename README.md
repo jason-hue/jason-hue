@@ -3,7 +3,7 @@
 - 🔭 I’m currently working on something cool.
 - 🌱 I’m currently learning Everything I like.
 - 💬 Ask me about anything related to Java/Python.
-- 📫 How to reach me: wisdom_zhe@qq.com
+- 📫 How to reach me: 2113130664@qq.com
 - 😄 Read more about my CSDN: [here]([https://blog.csdn.net/qq_44231797?spm=1000.2115.3001.5343](https://blog.csdn.net/weixin_44222059?type=blog))
 
 ![](https://github-readme-stats.vercel.app/api?username=wisdom-zhe&show_icons=true&theme=transparent)
