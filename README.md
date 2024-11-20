@@ -14,7 +14,6 @@
 
 ![](https://github-readme-stats.vercel.app/api?username=jason-hue&show_icons=true&theme=transparent)
 
-You are my ![Visitor Count](https://profile-counter.glitch.me/jason-hue/count.svg) visitor,Thank You!
 
 ### My Skill Set
 
